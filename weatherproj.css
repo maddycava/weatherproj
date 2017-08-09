@@ -1,0 +1,290 @@
+/* Resets: to ensure we start with a clean slate */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%; /* This is required for flex to properly place app in the center of screen */
+}
+
+body {
+  align-items: center;
+  background-color: #fdfdb4;
+  display: flex;
+  font-family: 'Poiret One';
+  font-size: 20px;
+  justify-content: center;
+}
+
+fieldset {
+  border: none;
+}
+
+#clouds {
+  bottom: -110px;
+	position: absolute;
+}
+.cloud {
+  background: #fff;
+  height: 60px;
+  width: 200px;
+
+	border-radius: 200px;
+	-moz-border-radius: 200px;
+	-webkit-border-radius: 200px;
+
+	position: relative;
+}
+.cloud:before,
+.cloud:after {
+  background: #fff;
+	content: '';
+  height: 80px;
+  left: 10px;
+	position: absolute;
+  top: -15px;
+	width: 100px;
+
+	border-radius: 100px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+
+  transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+}
+
+.cloud:after {
+  height: 120px;
+  left: auto;
+  right: 15px;
+  top: -55px;
+	width: 120px;
+}
+.x1 {
+  opacity: 0.3;
+
+	-webkit-animation: moveclouds 15s linear infinite;
+	-moz-animation: moveclouds 15s linear infinite;
+	-o-animation: moveclouds 15s linear infinite;
+}
+.x2 {
+	left: 100px;
+  top: -50px;
+
+	-webkit-transform: scale(0.4);
+	-moz-transform: scale(0.4);
+	transform: scale(0.4);
+	opacity: 0.4;
+	-webkit-animation: moveclouds 25s linear infinite;
+	-moz-animation: moveclouds 25s linear infinite;
+	-o-animation: moveclouds 25s linear infinite;
+}
+.x3 {
+	left: -150px;
+  top: -100px;
+
+	-webkit-transform: scale(0.75);
+	-moz-transform: scale(0.75);
+	transform: scale(0.75);
+	opacity: 0.75; /* opacity proportional to the size */
+
+	-webkit-animation: moveclouds 20s linear infinite;
+	-moz-animation: moveclouds 20s linear infinite;
+	-o-animation: moveclouds 20s linear infinite;
+}
+.x4 {
+	left: 370px;
+  top: -150px;
+
+	-webkit-transform: scale(0.55);
+	-moz-transform: scale(0.55);
+	transform: scale(0.55);
+	opacity: 0.55; /*opacity proportional to the size*/
+
+	-webkit-animation: moveclouds 18s linear infinite;
+	-moz-animation: moveclouds 18s linear infinite;
+	-o-animation: moveclouds 18s linear infinite;
+}
+.x5 {
+	left: -50px;
+  top: -90px;
+
+	-webkit-transform: scale(0.7);
+	-moz-transform: scale(0.7);
+	transform: scale(0.7);
+	opacity: 0.7; /* opacity proportional to the size */
+
+	-webkit-animation: moveclouds 20s linear infinite;
+	-moz-animation: moveclouds 20s linear infinite;
+	-o-animation: moveclouds 20s linear infinite;
+}
+
+@-webkit-keyframes moveclouds {
+	0% {margin-left: 400px;}
+	100% {margin-left: -400px;}
+}
+@-moz-keyframes moveclouds {
+	0% {margin-left: 400px;}
+	100% {margin-left: -400px;}
+}
+@-o-keyframes moveclouds {
+	0% {margin-left: 400px;}
+	100% {margin-left: -400px;}
+}
+
+
+/* iPhone and controls */
+.ring-silent-button {
+  background-color: #b8dfef;
+  height: 22px;
+  left: -8px;
+  position: absolute;
+  width: 6px;
+  top: 90px;
+}
+.volume-up-button {
+  background-color: #b8dfef;
+  height: 32px;
+  left: -8px;
+  position: absolute;
+  top: 145px;
+  width: 6px;
+}
+.volume-down-button {
+  background-color: #b8dfef;
+  height: 32px;
+  left: -8px;
+  position: absolute;
+  top: 192px;
+  width: 6px;
+}
+.camera {
+  background-color:#757575 ;
+  border-radius: 5px;
+  height: 10px;
+  left: 110px;
+  position: absolute;
+  top: 30px;
+  width: 10px;
+}
+.receiver {
+  background-color: #757575;
+  border-radius: 5px;
+  height: 10px;
+  left: 140px;
+  position: absolute;
+  top: 30px;
+  width: 60px;
+}
+.on-off-button {
+  background-color: #b8dfef;
+  height: 45px;
+  right: -8px;
+  position: absolute;
+  top: 140px;
+  width: 6px;
+}
+.home-button {
+  background-color: black;
+  border: 3px solid #b8dfef;
+  border-radius: 20px;
+  height: 30px;
+  left: 150px;
+  position: absolute;
+  bottom: 8px;
+  width: 30px;
+}
+
+.iphone-wrapper {
+  background-color: black;
+  padding: 80px 15px 54px 15px;
+  border-radius: 40px;
+  border: 5px solid #b8dfef;
+  position: relative;
+}
+
+.iphone-screen {
+  animation: BackgroundGradient 20s ease infinite;
+  background-color: #FFF0F2;
+  background-size: 400% 400%;
+  border: 1px solid #e4e4e4;
+  height: 490px;
+  overflow: hidden;
+  padding: 25px 20px;
+  position: relative;
+  text-align: center;
+  width: 260px;
+}
+
+/* Content */
+.app-logo {
+  background-color: #99b5c3;
+  border-radius: 54px;
+  height: 52px;
+  padding: 18px 10px;
+}
+
+.app-name {
+  font-family: 'Poiret One';
+  color: #b8dfef;
+}
+
+.weather-form {
+  margin-top: 20px;
+ font-family: 'Poiret One';
+}
+
+.weather-info-wrapper {
+  font-size: 20px;
+  text-align: left;
+}
+
+.weather-info-title {
+  font-weight: bold;
+}
+
+#city-selector {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 22px;
+  height: 40px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+#city-selector:hover {
+  background-color: #eee;
+}
+
+.form-label {
+  display: block;
+	font-family: 'Poiret One';
+	}
+
+.city-location,
+.condition,
+.temperature {
+  margin-bottom: 35px;
+}
+
+.submit-button {
+  background-color: #b8dfef;
+  border: none;
+  border-radius: 4px;
+  color:black;
+  cursor: pointer;
+  font-size: 22px;
+  margin: 10px 0 22px 0;
+  padding: 14px 20px;
+  width: 100%;
+	font-family: 'Poiret One';
+	font-weight: bold;
+}
+
+.submit-button:hover {
+  background-color: #017b98;
+}

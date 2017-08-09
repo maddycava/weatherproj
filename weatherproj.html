@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Weather</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="weatherproj.js"></script>
+    <link rel="stylesheet" type="text/css" href="weatherproj.css">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans"> -->
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+  </head>
+  <body>
+    <div class="iphone-wrapper">
+      <aside class="ring-silent-button"></aside>
+      <aside class="volume-up-button"></aside>
+      <aside class="volume-down-button"></aside>
+      <aside class="camera"></aside>
+      <aside class="receiver"></aside>
+      <aside class="on-off-button"></aside>
+      <aside class="home-button"></aside>
+      <div class="iphone-screen">
+          <h1 class="app-name">myweather</h1>
+        <form class="weather-form">
+          <fieldset>
+            <label class="form-label">Please Select a City: </label>
+            <select id="city-selector">
+              <option value="Sunnyvale, CA">Sunnyvale, CA</option>
+              <option value="Boston, MA">Boston, MA</option>
+              <option value="Portland, OR">Portland, OR</option>
+              <option value="Seattle, WA">Seattle, WA</option>
+              <option value="New York City, NY">New York City, NY</option>
+              <option value="Los Angeles, CA">Los Angeles, CA</option>
+              <option value="Detroit, MI">Detroit, MI</option>
+            </select>
+            <button class="submit-button" type="submit" name="button">Get weather</button>
+
+            <div class="weather-info-wrapper">
+              <h4 class="weather-info-title">City/Location:</h4>
+              <p id="description" class="weather-info-value city-location"></p>
+
+              <h4 class="weather-info-title">Condition:</h4>
+              <p id="condition" class="weather-info-value condition"></p> <!-- depending use css to show-->
+
+              <h4 class="weather-info-title">Temperature (F):</h4>
+              <p id="temp" class="weather-info-value temperature"></p> <!--give both celsius and ferenheit options or a btn to chose-->
+            </div>
+          </fieldset>
+        </form>
+
+        <!-- Time for multiple clouds to dance around -->
+        <div id="clouds">
+          <div class="cloud x1"></div>
+          <div class="cloud x2"></div>
+          <div class="cloud x3"></div>
+          <div class="cloud x4"></div>
+          <div class="cloud x5"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
